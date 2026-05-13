@@ -1,0 +1,6 @@
+Not At Risk	496
+At Risk	511
+Not At Risk	56.7	251.3	134.1	139.1
+At Risk	52.6	242.3	129.1	158.4
+Female	312	226	72.4
+Male	695	285	41.0

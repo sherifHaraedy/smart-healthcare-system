@@ -1,0 +1,6 @@
+drwxr-xr-x   - root supergroup          0 2026-05-13 20:37 /healthcare/predictions
+-rw-r--r--   3 root supergroup          0 2026-05-13 20:37 /healthcare/predictions/_SUCCESS
+-rw-r--r--   3 root supergroup       1275 2026-05-13 20:37 /healthcare/predictions/part-00000-79528832-ab16-4626-82f2-2808afe64792-c000.csv
+-rw-r--r--   3 root supergroup       1853 2026-05-13 20:37 /healthcare/predictions/part-00001-79528832-ab16-4626-82f2-2808afe64792-c000.csv
+drwxr-xr-x   - root supergroup          0 2026-05-13 20:36 /healthcare/raw
+-rw-r--r--   1 root supergroup      38114 2026-05-13 20:36 /healthcare/raw/heart.csv
