@@ -1,0 +1,19 @@
+{
+  "name": "Healthcare Big Data Pipeline",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "spark-master",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "mtxr.sqltools"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/bin/python3"
+      }
+    }
+  },
+  "postStartCommand": "echo 'Connected to spark-master - run ./scripts/pipeline.sh to start'"
+}
