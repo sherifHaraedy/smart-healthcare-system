@@ -10,6 +10,7 @@ echo "[1/4] Starting Docker cluster..."
 docker compose up -d
 echo "Waiting for services to be ready..."
 sleep 3
+docker exec hive-server schematool -initSchema -dbType postgres || true
 echo "Docker cluster started"
 
 echo ""
