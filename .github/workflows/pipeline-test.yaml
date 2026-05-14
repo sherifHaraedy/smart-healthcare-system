@@ -16,11 +16,8 @@ jobs:
 
     - name: Initialize environment configuration
       run: |
-        if [ -f .env.example ]; then
-          cp .env.example .env
-        else
-          echo "CORE_CONF_fs_defaultFS=hdfs://namenode:9000" > .env
-        fi
+        cp hadoop.env.example hadoop.env
+        cp hadoop-hive.env.example hadoop-hive.env
 
     - name: Prepare script permissions
       run: make setup
