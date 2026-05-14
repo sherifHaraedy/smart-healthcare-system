@@ -14,7 +14,8 @@ echo "Docker cluster started"
 
 echo ""
 echo "Installing Python dependencies..."
-docker exec -u 0 spark-master pip3 install --no-cache-dir --prefer-binary numpy==1.21.6
+docker exec -u 0 spark-master apk update
+docker exec -u 0 spark-master apk add --no-cache py3-numpy
 
 echo ""
 echo "[2/4] Uploading dataset to HDFS..."
