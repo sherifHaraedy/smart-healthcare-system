@@ -1,0 +1,39 @@
+name: Test Big Data Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Initialize environment configuration
+      run: |
+        if [ -f .env.example ]; then
+          cp .env.example .env
+        else
+          echo "CORE_CONF_fs_defaultFS=hdfs://namenode:9000" > .env
+        fi
+
+    - name: Prepare script permissions
+      run: make setup
+
+    - name: Execute end-to-end pipeline
+      run: make pipeline
+
+    - name: Capture and verify output artifacts
+      run: make artifacts
+
+    - name: Debug cluster state on failure
+      if: failure()
+      run: |
+        docker ps -a
+        docker logs spark-master || true
+        docker logs hive-server || true
