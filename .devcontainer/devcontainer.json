@@ -1,6 +1,6 @@
 {
   "name": "Healthcare Big Data Pipeline",
-  "dockerComposeFile": "../docker-compose.yml",
+  "dockerComposeFile": "../docker-compose.yaml",
   "service": "spark-master",
   "workspaceFolder": "/workspace",
   "customizations": {

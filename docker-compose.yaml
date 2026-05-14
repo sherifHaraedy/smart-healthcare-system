@@ -64,7 +64,7 @@ services:
       - "8080:8080"
       - "7077:7077"
     volumes:
-      - ./spark:/spark
+      - ./spark:/app/spark
       - ./data:/data
     env_file:
       - hadoop.env

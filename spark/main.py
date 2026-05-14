@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from pyspark.sql import SparkSession
 from pyspark.ml.feature import VectorAssembler, StandardScaler
 from pyspark.ml.classification import RandomForestClassifier
@@ -6,7 +8,6 @@ from pyspark.ml.evaluation import (
     MulticlassClassificationEvaluator,
 )
 from pyspark.ml import Pipeline
-
 
 def main():
     # Initialize Spark session with Hive support

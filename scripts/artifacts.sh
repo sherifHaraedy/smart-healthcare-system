@@ -28,7 +28,7 @@ echo "Saved: $OUT/hive_counts_$TIMESTAMP.txt"
 
 echo ""
 echo "[3/5] Capturing Hive analytics queries..."
-docker exec hive-server hive -f /hive/3_analytics.hql \
+docker exec hive-server hive -f /hive/display_analysis.hql \
     > "$OUT/hive_analytics_$TIMESTAMP.txt"
 echo "Saved: $OUT/hive_analytics_$TIMESTAMP.txt"
 
